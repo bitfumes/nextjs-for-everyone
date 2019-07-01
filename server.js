@@ -12,6 +12,10 @@ app.prepare()
     server.get('/user/:name',(req,res) => {
         app.render(req,res,'/user',{name:req.params.name})
     })
+    
+    server.get('/github/:user',(req,res) => {
+        app.render(req,res,'/github',{user:req.params.user})
+    })
 
     server.get('*',(req,res) => {
         return handle(req,res);
