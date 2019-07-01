@@ -15,7 +15,8 @@ export default class Github extends Component {
                 <ul>
                 {
                     this.props.repos.map(repo => (
-                        <Link href={`/github/bitfumes/${repo.name}`}>
+                        <Link href={`/github/repo?user=bitfumes&repo=${repo.name}`}
+                        as={`/github/bitfumes/${repo.name}`}>
                             <a><li>{repo.name}</li></a>
                         </Link>
                     ))
